@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-/*import { createStore } from 'redux'*/
 
 const todo = (state = [], action) => {
     switch(action.type) {
