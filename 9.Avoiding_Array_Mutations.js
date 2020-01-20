@@ -1,5 +1,3 @@
-import { isString } from "util";
-
 const addCounter = (list) => {
     /* modifica el array
     list.push(0);
@@ -18,6 +16,7 @@ const testAddCounter = () => {
 }; 
 
 testAddCounter();
+console.log('Tests Add Counter passed.');
 
 const removeCounter = (list, index) => {
     /* modifica el array
@@ -27,7 +26,6 @@ const removeCounter = (list, index) => {
         ...list.slice(0, index),
         ...list.slice(index + 1)
     ]
-
 };
 
 const testRemoveCounter = () => {
@@ -41,6 +39,7 @@ const testRemoveCounter = () => {
 }; 
 
 testRemoveCounter();
+console.log('Tests Remove Counter passed.');
 
 const incrementCounter = (list, index) => {
     /*mutacion
@@ -54,7 +53,7 @@ const incrementCounter = (list, index) => {
 ]
 }
 
-const testRemoveCounter = () => {
+const testIncrementCounter = () => {
     const listBefore = [0, 10, 20];
     const listAfter = [0, 11, 20];
 
@@ -64,4 +63,5 @@ const testRemoveCounter = () => {
     ).toEqual(listAfter);
 }; 
 
-testRemoveCounter();
+testIncrementCounter();
+console.log('Tests Increment Counter passed.');

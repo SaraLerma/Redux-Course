@@ -46,24 +46,16 @@ const visibilityFilter = ( state = 'SHOW ALL', action) => {
   }
 }
 
-const {combineReducers} = Redux;
+//const {combineReducers} = Redux;
+const combineReducers = (reducers) => {
+    return (state = {}, action) => {
+        return Object.keys(reducers).reduce
+    }
+}
 const todoApp = combineReducers({
     todos, //es lo mismo q poner todos: todos
     visibilityFilter// visibilityFilter: visibilityFilter
 });
-/*COMPONE OBJETOS. la app esta compuesta por 2 reducers: todos y visibilityFilter 
-const todoApp = (state = {}, action) => {
-  return {
-    todos: todos(
-      state.todos,
-      action
-    ),
-    visibilityFilter: visibilityFilter(
-      state.visibilityFilter,
-      action
-    )
-  }
-}*/
 
 const { createStore } = Redux;
 const store = createStore(todoApp);

@@ -20,11 +20,13 @@ const toggleTodo = (todo) => {
 };
 
 const testToggleTodo = () => {
+  
     const todoBefore = {
         id: 0,
         text: 'Learn Redux',
         completed: false
     };
+  
     const todoAfter = {
         id: 0,
         text: 'Learn Redux',
@@ -36,3 +38,5 @@ const testToggleTodo = () => {
         toggleTodo(todoBefore)
     ).toEqual(todoAfter);
 }
+testToggleTodo();
+console.log('Test Toggle_Todo passed.');

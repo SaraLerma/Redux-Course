@@ -41,27 +41,29 @@ const todos = (state = [], action) => {
 const testAddTodo = () => {
     const stateBefore = [];
     const action = {
-        type: 'ADD-TODO',
+        type: 'ADD_TODO',
         id: 0,
         text: 'Learn Redux'
     };
 
-    const stateAfter = {
+    const stateAfter = [
+      {
         id: 0,
         text: 'Learn Redux',
         completed: false
-    };
+      }
+    ];
 
     deepFreeze(stateBefore);
     deepFreeze(action);
     
     expect(
-        toggleTodo(stateBefore, action)
+        todos(stateBefore, action)
     ).toEqual(stateAfter);
 };
 
 testAddTodo();
-console.log('All tests are passed');
+console.log('Add tests are passed');
 
 const testToggleTodo = () => {
     const stateBefore = [
@@ -98,10 +100,10 @@ const testToggleTodo = () => {
     deepFreeze(action);
     
     expect(
-        toggleTodo(stateBefore, action)
+        todos(stateBefore, action)
     ).toEqual(stateAfter);
 };
 testToggleTodo();
-console.log('All tests are passed');
+console.log('Toggle tests are passed');
 
 

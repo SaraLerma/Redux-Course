@@ -1,20 +1,24 @@
 const counter = (state = 0, action) => {
     switch (action.type) {
       case 'INCREMENT':
-        return state + 1
+        return state + 1;
       case 'DECREMENT':
-        return state - 1
+        return state - 1;
       default:
-        return state
+        return state;
     }
 }
 
-const Counter = ({value, onIncrement, onDecrement}) => (
-    <div>
-        <h1>{value}</h1>
-        <button onClick = {onIncrement}>+</button>
-        <button onClick = {onDecrement}>-</button>
-    </div>
+const Counter = ({
+  value,
+  onIncrement,
+  onDecrement
+}) => (
+  <div>
+    <h1>{value}</h1>
+    <button onClick={onIncrement}> + </button>
+    <button onClick={onDecrement}> - </button>
+  </div>
 );
 
 const {createStore} = Redux; //ES6
@@ -37,7 +41,6 @@ const render = () => {
         />,
         document.getElementById('root') //para renderizar
     );
-    document.body.innerText = store.getState();
 };
 
 store.subscribe(render);//nos suscribimos al store, por lo q render se ejecuta cada vez q cambia el estado, por l q el contador obtiene el estado actual
