@@ -13,3 +13,6 @@ The first three videos are the Redux principles:
 3. **Changes are made with pure functions**
 
     To specify how the state tree is transformed by actions, you write pure reducers.
+
+
+Course link : https://egghead.io/courses/getting-started-with-redux
